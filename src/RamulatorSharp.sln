@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamulatorSharp", "RamulatorSharp.csproj", "{98C0AFA8-817E-43EB-85D0-0E618A309840}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Debug|x64.ActiveCfg = Debug|x64
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Debug|x64.Build.0 = Debug|x64
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Debug|x86.ActiveCfg = Debug|x86
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Debug|x86.Build.0 = Debug|x86
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Release|x64.ActiveCfg = Release|x64
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Release|x64.Build.0 = Release|x64
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Release|x86.ActiveCfg = Release|x86
+		{98C0AFA8-817E-43EB-85D0-0E618A309840}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56F1FFDA-2A18-48BC-9F42-916A54FEA89C}
+	EndGlobalSection
+EndGlobal

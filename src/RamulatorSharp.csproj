@@ -1,0 +1,176 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{98C0AFA8-817E-43EB-85D0-0E618A309840}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>RamulatorSharp</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\GraphicsConfig.cs" />
+    <Compile Include="Graphics\TimeLineGraphics.cs" />
+    <Compile Include="gzip\Adler32.cs" />
+    <Compile Include="gzip\CRC32.cs" />
+    <Compile Include="gzip\Deflater.cs" />
+    <Compile Include="gzip\DeflaterConstants.cs" />
+    <Compile Include="gzip\DeflaterEngine.cs" />
+    <Compile Include="gzip\DeflaterHuffman.cs" />
+    <Compile Include="gzip\DeflaterOutputStream.cs" />
+    <Compile Include="gzip\DeflaterPending.cs" />
+    <Compile Include="gzip\FastZip.cs" />
+    <Compile Include="gzip\FileSystemScanner.cs" />
+    <Compile Include="gzip\GZIPConstants.cs" />
+    <Compile Include="gzip\GZipException.cs" />
+    <Compile Include="gzip\GzipInputStream.cs" />
+    <Compile Include="gzip\GzipOutputStream.cs" />
+    <Compile Include="gzip\IChecksum.cs" />
+    <Compile Include="gzip\IEntryFactory.cs" />
+    <Compile Include="gzip\INameTransform.cs" />
+    <Compile Include="gzip\Inflater.cs" />
+    <Compile Include="gzip\InflaterDynHeader.cs" />
+    <Compile Include="gzip\InflaterHuffmanTree.cs" />
+    <Compile Include="gzip\InflaterInputStream.cs" />
+    <Compile Include="gzip\IScanFilter.cs" />
+    <Compile Include="gzip\NameFilter.cs" />
+    <Compile Include="gzip\OutputWindow.cs" />
+    <Compile Include="gzip\PathFilter.cs" />
+    <Compile Include="gzip\PendingBuffer.cs" />
+    <Compile Include="gzip\PkzipClassic.cs" />
+    <Compile Include="gzip\SharpZipBaseException.cs" />
+    <Compile Include="gzip\StrangeCRC.cs" />
+    <Compile Include="gzip\StreamManipulator.cs" />
+    <Compile Include="gzip\StreamUtils.cs" />
+    <Compile Include="gzip\ZipConstants.cs" />
+    <Compile Include="gzip\ZipEntry.cs" />
+    <Compile Include="gzip\ZipEntryFactory.cs" />
+    <Compile Include="gzip\ZipException.cs" />
+    <Compile Include="gzip\ZipExtraData.cs" />
+    <Compile Include="gzip\ZipFile.cs" />
+    <Compile Include="gzip\ZipHelperStream.cs" />
+    <Compile Include="gzip\ZipInputStream.cs" />
+    <Compile Include="gzip\ZipNameTransform.cs" />
+    <Compile Include="gzip\ZipOutputStream.cs" />
+    <Compile Include="MemCtrl\BLPTracker.cs" />
+    <Compile Include="MemCtrl\BusTransaction.cs" />
+    <Compile Include="MemCtrl\Command.cs" />
+    <Compile Include="MemCtrl\DRAMCache.cs" />
+    <Compile Include="MemCtrl\MemCacheMonitor.cs" />
+    <Compile Include="MemCtrl\MemCtrl.cs" />
+    <Compile Include="MemCtrl\MemCtrlConfig.cs" />
+    <Compile Include="MemCtrl\MemCtrlStat.cs" />
+    <Compile Include="MemCtrl\Refresh\AutoRefresh.cs" />
+    <Compile Include="MemCtrl\Refresh\RefreshPolicy.cs" />
+    <Compile Include="MemReq\Auxiliary\ContiguousAllocator.cs" />
+    <Compile Include="MemReq\Auxiliary\PageRandomizer.cs" />
+    <Compile Include="MemReq\Auxiliary\PageSequencer.cs" />
+    <Compile Include="MemReq\Request.cs" />
+    <Compile Include="MemSched\ATLAS.cs" />
+    <Compile Include="MemSched\BLISS.cs" />
+    <Compile Include="MemSched\FCFS.cs" />
+    <Compile Include="MemSched\FRFCFS.cs" />
+    <Compile Include="MemSched\MemSched.cs" />
+    <Compile Include="MemSched\MemSchedConfig.cs" />
+    <Compile Include="MemSched\MemSchedStat.cs" />
+    <Compile Include="MemSched\PARBS.cs" />
+    <Compile Include="MemSched\TCM.cs" />
+    <Compile Include="MemWBMode\DecoupledWBFullServeN.cs" />
+    <Compile Include="MemWBMode\MemWBMode.cs" />
+    <Compile Include="Mem\BankStat.cs" />
+    <Compile Include="Mem\BusStat.cs" />
+    <Compile Include="Mem\DDR3DRAM.cs" />
+    <Compile Include="Mem\DRAMState.cs" />
+    <Compile Include="Mem\DRAMTiming.cs" />
+    <Compile Include="Mem\Mapping.cs" />
+    <Compile Include="Mem\MemConfig.cs" />
+    <Compile Include="Proc\Cache.cs" />
+    <Compile Include="Proc\CacheStat.cs" />
+    <Compile Include="Proc\InstWnd.cs" />
+    <Compile Include="Proc\Proc.cs" />
+    <Compile Include="Proc\ProcConfig.cs" />
+    <Compile Include="Proc\ProcStat.cs" />
+    <Compile Include="Proc\Trace.cs" />
+    <Compile Include="Proc\Xbar.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Sim\Config.cs" />
+    <Compile Include="Sim\Sim.cs" />
+    <Compile Include="Sim\SimStat.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\src\v16\.suo" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
