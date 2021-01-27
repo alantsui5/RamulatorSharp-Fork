@@ -436,7 +436,7 @@ namespace Ramulator.MemCtrl
 
                 // New Code Added
                 //PrintReqState(req);
-                ReqStateFile(req);
+                SaveReqState(req, "bzip");
 
                 // Normal requests
                 inflightq.Remove(req);
@@ -1358,10 +1358,10 @@ namespace Ramulator.MemCtrl
             Console.WriteLine("Time={0} REQ=" + req.to_str() + " hit=" + is_row_hit(req), Cycles);
         }
 
-        private void ReqStateFile(Req req)
+        private void SaveReqState(Req req, String benchmark)
         {
             using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"bzip2.txt", true))
+                new System.IO.StreamWriter(String.Format(@"{0}.txt", benchmark), true))
             {
                 file.WriteLine("Time=" + Cycles + " REQ=" + req.to_str() + " hit=" + is_row_hit(req));
             }
